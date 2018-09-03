@@ -1,2 +1,40 @@
-<h1>Sales#new</h1>
-<p>Find me in app/views/sales/new.html.erb</p>
+<h1>Nueva Venta</h1>
+
+  <div class="row justify-content-md-center col-md-10">
+    <div class="col-md-5">
+      <div class="row justify-content-md-center">
+        <%= form_with model: @sale, local: true do |f| %>
+        <div class="form-group col-md-10">
+          <%= f.label :cod, "Código" %>
+          <%= f.text_field :cod, class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-10">
+          <%= f. label :category%>
+          <%= f.text_field :category, class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-10">
+          <%= f. label :detail, "Detalle" %>
+          <%= f.text_area :detail, class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-10">
+          <%= f. label :value, "Valor" %>
+          <%= f.text_field :value, class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-10">
+          <%= f. label :discount, "% Descuento" %>
+          <%= f.text_field :discount, class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-5">
+          <%= f. label :tax, "Con IVA" %>
+          <%= f.check_box :tax %>
+          <%= f.submit "Crear Venta", class: 'btn btn-primary' %>
+
+        </div>
+        <div class="form-group col-md-5">
+          <%= link_to 'Volver', sales_path, class: 'btn btn-success' %>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
