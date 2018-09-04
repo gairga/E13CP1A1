@@ -1,0 +1,29 @@
+
+<h1>Ventas</h1>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Lista de Ventas</div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Cod</th>
+      <th>Categoria</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.cod %></td>
+        <td><%= sale.category %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+
+<br>
+
