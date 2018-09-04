@@ -11,6 +11,11 @@ class SalesController < ApplicationController
   def create
   #	byebug
 	@sale = Sale.new(sale_params)
+	if @sale.tax == 1
+      @sale.total = (1.19)*(@sale.value - @sale.value*@sale.discount/100)
+    else
+      @sale.total = @sale.value - @sale.value*@sale.discount/100
+    end
 	@sale.save
     redirect_to sales_path
   end 

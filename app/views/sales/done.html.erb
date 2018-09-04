@@ -11,6 +11,12 @@
     <tr>
       <th>Cod</th>
       <th>Categoria</th>
+      <th>Detail</th>
+      <th>Category</th>
+      <th>Value</th>
+      <th>Discount</th>
+      <th>Tax</th>
+      <th>Total</th>
     </tr>
   </thead>
 
@@ -18,7 +24,12 @@
     <% @sales.each do |sale| %>
       <tr>
         <td><%= sale.cod %></td>
-        <td><%= sale.category %></td>
+		<td><%= sale.category %></td>
+		<td><%= sale.detail %></td>
+		<td><%= sale.value %></td>
+		<td><%= sale.discount %></td>
+		<td><%= sale.tax %></td>
+		<td><%= sale.total %></td>
       </tr>
     <% end %>
   </tbody>
